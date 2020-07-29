@@ -33,6 +33,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'mini_racer'
 gem 'kaminari'
 gem 'rails-i18n'
+# gem "activesupport", ">= 5.2.4.3"
 
 
 group :development, :test do
