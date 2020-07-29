@@ -27,7 +27,10 @@
    end
 
    def show
-     @comment = @board.comments.new #board.comments(boardオブジェクトのcomments)にnewメソッドを呼び出すことで、掲示板に紐づいた@commentが取得できる
+     #下記のコードでは、commentモデルからnewで作成する際、board_idで初期化する。コレであれば、boaed.idに紐づいたコメントには影響しない。
+     @comment = Comment.new(board_id: @board.id)
+     #下記のコードではnewメソッドで新しく作成された、保存されていないコメントがboard.commentに含まれて、@commentに空の投稿が入ってしまう。
+     # @comment = @board.comments.new #board.comments(boardオブジェクトのcomments)にnewメソッドを呼び出すことで、掲示板に紐づいた@commentが取得できる
    end
 
    def edit

@@ -10,4 +10,12 @@
 <% end %>
 
 <%= render @board  %>
+
+<div class="p-comment__list">
+  <div class="p-comment_listTitle">コメント</div>
+  <%= render @board.comments %>
+<!--   上記の　@board.comments のように、特定のモデルのオブジェクトの引数をrenderに渡すと、自動的にモデルのビューを参照し、オブジェクトの数だけ呼び出してくれる。（renderされる）
+  つまり、このrenderで app/views/comments/_comment.html.erb の中身が、その投稿分だけ呼び出される。 -->
+</div>
+
 <%= render partial: 'comment_form', locals: { comment: @comment } %>
