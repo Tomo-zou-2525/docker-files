@@ -1,6 +1,6 @@
 <div class="p-comment__item">
   <p><%= simple_format(comment.comment) %></p>
-  <!-- コメントは複数行になる可能性があるので、simple_formatで改行コードがERタグになるようにしている。 -->
+  <!-- コメントは複数行になる可能性があるので、simple_formatで改行コードがerタグになるようにしている。 -->
   <div class="p-comment__bottomLine">
     <span><%= comment.name %></span>
     <span><%= comment.created_at.to_s(:datetime_jp) %></span>
