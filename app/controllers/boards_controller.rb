@@ -38,14 +38,10 @@
    end
 
    def update
-     if @board.update(board_params)
-       redirect_to @board
-     else
-      redirect_to :back, flash: {
-        board: @board,
-        error_messages: @board.errors.full_messages
-      }
-    end
+     
+     board.update(board_params)
+
+     redirect_to @board
    end
 
    def destroy
